@@ -1,0 +1,56 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: db
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks:
+      - app-network
+
+  vajenec:
+    depends_on:
+      - db
+    image: wordpress:latest  # Uporabimo uradno WordPress sliko
+    container_name: wordpress  # Container bo imenovan 'wordpress' ali po želji kako ga želiš imenovati
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - WORDPRESS_DB_HOST=db:3306
+      - WORDPRESS_DB_USER=${MYSQL_USER}
+      - WORDPRESS_DB_PASSWORD=${MYSQL_PASSWORD}
+      - WORDPRESS_DB_NAME=${MYSQL_DATABASE}
+    volumes:
+      - wordpress:/var/www/html
+    ports:
+      - "8282:80"
+    networks:
+      - app-network
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: phpmyadmin
+    environment:
+      - PMA_HOST=db
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    restart: always
+    ports:
+      - "8281:80"
+    networks:
+      - app-network
+
+volumes:
+  dbdata:
+  wordpress:
+
+networks:
+  app-network:
+    driver: bridge
