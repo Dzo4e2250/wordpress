@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Storitve – Brezčasna Eleganca</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body class="page page-services">
+    <header class="site-header">
+        <nav class="nav">
+            <a class="logo" href="index.html">Brezčasna Eleganca</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Domov</a></li>
+                <li><a href="about.html">O nas</a></li>
+                <li><a href="kolekcija.html">Kolekcija</a></li>
+                <li><a class="current" href="storitve.html">Storitve</a></li>
+                <li><a href="mnenja.html">Mnenja</a></li>
+                <li><a class="btn" href="kontakt.html">Rezervacija</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <p class="eyebrow">Prilagojena izkušnja</p>
+            <h1>Od ideje do zadnjega šiva</h1>
+            <p class="hero-text">
+                Naši procesi združujejo digitalno načrtovanje, ročno izdelavo in pozorno svetovanje. Skozi individualna srečanja
+                ustvarimo kos, ki je v celoti prilagojen vašim trenutkom.
+            </p>
+            <div class="hero-actions">
+                <a class="btn primary" href="kontakt.html">Rezerviraj svetovanje</a>
+                <a class="btn ghost" href="mnenja.html">Preberi izkušnje</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="section-heading">
+                <p class="eyebrow">Kaj nudimo</p>
+                <h2>Storitve, ki spremljajo celoten proces</h2>
+                <p>Izberite celovito pot ali posamezno storitev glede na vaše želje.</p>
+            </div>
+            <div class="service-grid">
+                <article class="service-card">
+                    <h3>Osebna svetovanja</h3>
+                    <p>Intimni pogovor o vašem slogu, željah in priložnostih, za katere potrebujete garderobo.</p>
+                    <ul>
+                        <li>Analiza garderobe in ciljev</li>
+                        <li>Izbira materialov in barvnih poudarkov</li>
+                        <li>Digitalna tabla navdiha</li>
+                    </ul>
+                </article>
+                <article class="service-card">
+                    <h3>Kroj po meri</h3>
+                    <p>Precizne meritve s 3D skeniranjem in ročno konstrukcijo kroja.</p>
+                    <ul>
+                        <li>Več faz pomerjanja</li>
+                        <li>Možnost prilagoditev do zadnjega dne</li>
+                        <li>Arhiviranje kroja za prihodnje naročila</li>
+                    </ul>
+                </article>
+                <article class="service-card">
+                    <h3>Dogodki in styling</h3>
+                    <p>Priprava celotnega videza za posebne priložnosti in ekipe.</p>
+                    <ul>
+                        <li>Styling na lokaciji dogodka</li>
+                        <li>Sodelovanje z vizažisti in frizerji</li>
+                        <li>Koordinacija dodatkov in nakita</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="two-column">
+                <div>
+                    <div class="section-heading align-left">
+                        <p class="eyebrow">Proces</p>
+                        <h2>Tri koraki do brezčasnega kosa</h2>
+                        <p>Vsaka etapa je prilagojena vašemu urniku in tempu odločanja.</p>
+                    </div>
+                    <ol class="numbered-list">
+                        <li>Uvodni pogovor, določitev proračuna in zbiranje referenc.</li>
+                        <li>Predstavitev skic, izbor materialov in prvo pomerjanje.</li>
+                        <li>Zaključni detajli, končno prilagajanje in predaja z navodili za nego.</li>
+                    </ol>
+                </div>
+                <div class="image-panel image-process" aria-hidden="true"></div>
+            </div>
+        </section>
+
+        <section class="section highlight">
+            <div class="highlight-content">
+                <h2>Z nami boste ustvarili zgodbo, ki ostane</h2>
+                <p>
+                    Rezervirajte termin in izkusite, kako poteka sodelovanje z našim ateljejem – od prve skice do osebno
+                    oblikovanega videza.
+                </p>
+                <a class="btn primary" href="kontakt.html">Dogovori termin</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-columns">
+            <div>
+                <h3>Brezčasna Eleganca</h3>
+                <p>Atelje butičnih kreacij, ki prepletajo tradicijo in sodobnost.</p>
+            </div>
+            <div>
+                <h4>Kontakt</h4>
+                <ul>
+                    <li><a href="tel:+38640123456">+386 40 123 456</a></li>
+                    <li><a href="mailto:info@brezcasna-eleganca.si">info@brezcasna-eleganca.si</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Sledi nam</h4>
+                <ul class="socials">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-note">© <span id="year"></span> Brezčasna Eleganca. Vse pravice pridržane.</p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

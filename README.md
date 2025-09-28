@@ -4,7 +4,8 @@ Ta projekt vsebuje preprosto statično spletno stran, navdahnjeno s sodobno pred
 
 ## Struktura
 
-- `index.html` – glavni dokument s sekcijami hero, o nas, kolekcija, storitve, mnenja in kontakt.
+- `index.html` – glavni dokument s predstavitvenimi sekcijami in povezavami na podstrani.
+- `about.html`, `kolekcija.html`, `storitve.html`, `mnenja.html`, `kontakt.html` – podstrani z dodatnimi informacijami.
 - `styles/main.css` – slogovna predloga z zasnovo za temen, eleganten vizualni slog.
 
 ## Predogled
@@ -15,4 +16,4 @@ Za hiter predogled strani lahko uporabite preprost HTTP strežnik, npr. z vgraje
 python3 -m http.server 8000
 ```
 
-Nato v brskalniku odprite `http://localhost:8000`.
+Nato v brskalniku odprite `http://localhost:8000/index.html` in uporabite navigacijo za premikanje med podstranmi.
